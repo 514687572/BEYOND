@@ -36,7 +36,7 @@ public class ProcessController extends AbstractController {
 	HistoryService historyService;
 
 	@RequestMapping(value = "/tp.do", method = { RequestMethod.GET, RequestMethod.HEAD })
-	public @ResponseBody Map<String, Object> test(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public Map<String, Object> test(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// 开启流程，myprocess是流程的ID
         runtimeService.startProcessInstanceByKey("myProcess");
         // 查询历史表中的Task
