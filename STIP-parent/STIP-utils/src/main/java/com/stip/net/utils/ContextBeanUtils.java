@@ -1,8 +1,12 @@
 package com.stip.net.utils;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 public class ContextBeanUtils implements ApplicationContextAware {
 	private static ApplicationContext appCtx;
@@ -39,6 +43,17 @@ public class ContextBeanUtils implements ApplicationContextAware {
 	 */
 	public static Object getBean(String beanName) {
 		return appCtx.getBean(beanName);
+	}
+	
+	/**     
+	 * @description 获取HTTP请求    
+	 * @created 2017年7月4日 下午5:18:08     
+	 * @return     
+	 */
+	public static HttpServletRequest getRequest() {
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder
+				.getRequestAttributes()).getRequest();
+		return request;
 	}
 
 }

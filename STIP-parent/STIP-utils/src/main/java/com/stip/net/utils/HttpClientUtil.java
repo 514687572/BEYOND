@@ -29,7 +29,6 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -320,47 +319,4 @@ public class HttpClientUtil{
 
 	}
 
-	/**
-	 * 模拟用户登录yuguoAdmin
-	 * */
-	private static boolean loginYuguoAdmin(org.apache.commons.httpclient.HttpClient httpClient) {
-		// 模拟登录页面
-		PostMethod post = new PostMethod(ConstantUtils.SERVER_URL_ADMIN + "/system/login/login.do");
-		org.apache.commons.httpclient.NameValuePair name = new org.apache.commons.httpclient.NameValuePair("userName", "admin");
-		org.apache.commons.httpclient.NameValuePair pass = new org.apache.commons.httpclient.NameValuePair("pwd", "111111");
-		org.apache.commons.httpclient.NameValuePair sbx = new org.apache.commons.httpclient.NameValuePair("Submit.x", "0");
-		org.apache.commons.httpclient.NameValuePair sby = new org.apache.commons.httpclient.NameValuePair("Submit.y", "0");
-		org.apache.commons.httpclient.NameValuePair sb = new org.apache.commons.httpclient.NameValuePair("Submit", "Save");
-		post.setRequestBody(new org.apache.commons.httpclient.NameValuePair[] { name, pass, sbx, sby, sb });
-		try {
-			int status = httpClient.executeMethod(post);
-			return status == HttpStatus.SC_OK ? true : false;
-		} catch (HttpException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			post.releaseConnection();
-		}
-		return false;
-	}
-
-	public static String doHunDun(String url, Map map) {
-		HttpClient client = new DefaultHttpClient();
-		HttpPost post = new HttpPost(url);
-		String response = null;
-		try {
-			StringEntity s = new StringEntity(JSONObject.fromObject(map).toString(), "UTF-8");
-			s.setContentType("application/json");
-			post.setEntity(s);
-			org.apache.http.HttpResponse res = client.execute(post);
-			if (((org.apache.http.HttpResponse) res).getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-				HttpEntity entity = ((org.apache.http.HttpResponse) res).getEntity();
-				response = EntityUtils.toString(entity);
-			}
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-		return response;
-	}
 }

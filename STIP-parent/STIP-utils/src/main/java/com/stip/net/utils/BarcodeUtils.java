@@ -20,7 +20,7 @@ import com.swetake.util.Qrcode;
 
 @Controller
 @Scope("request")
-@RequestMapping("/yg/barcode")
+@RequestMapping("/utils/barcode")
 public class BarcodeUtils extends HttpServlet {
 	/**
 	 * 
@@ -30,12 +30,9 @@ public class BarcodeUtils extends HttpServlet {
 	/**
 	 * 商品二维码
 	 */
-	@RequestMapping(value = "/getGoodsBarcode.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/getBarcode.do", method = RequestMethod.GET)
 	public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, java.io.IOException {
-
-		String goodsId = Base64Coder.encodeString(req.getParameter("goodsId"));
-		String type = "type=" + ConstantUtils.GOODS_BARCODE;
-		String content = type + "&" + goodsId;
+		String content = "";
 
 		try {
 			Qrcode qrcodeHandler = new Qrcode();
