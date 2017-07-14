@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration>
+		<classPathEntry location="E:\InstalWork\java\mysqlcjava\mysql-connector-java-5.1.31.jar" />    
+	
+	<ibatorContext id="ibatorContext" targetRuntime="Ibatis2Java5" defaultModelType="flat">
+		<ibatorPlugin type="org.apache.ibatis.ibator.plugins.EqualsHashCodePlugin" />
+		<ibatorPlugin type="org.apache.ibatis.ibator.plugins.SerializablePlugin" />
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.20:3306/yuguodb" userId="root" password="root">
+        	<property name="" value=""/>
+    	</jdbcConnection>
+		<javaModelGenerator targetPackage="com.stip.net.model"
+			targetProject="yuguo">
+			<property name="enableSubPackages" value="false" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.stip.net.common.config.ibatis.res"
+			targetProject="yuguo">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<daoGenerator targetPackage="com.yuguo.net.dao"
+			targetProject="yuguo" type="REGALTEC">
+			<property name="enableSubPackages" value="false" />
+		</daoGenerator>
+		
+		<table tableName="t_sys_advertise"  schema="root" domainObjectName="TSysAdvertise"  alias="tSysAdvertise"></table>
+		
+	</ibatorContext>
+</ibatorConfiguration>
