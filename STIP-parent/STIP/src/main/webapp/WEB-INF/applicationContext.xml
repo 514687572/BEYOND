@@ -47,21 +47,6 @@
 		<property name="validationQuery" value="${jdbc.validationQuery}"></property>
 	</bean>
 	
-	<!-- DataSource定义 -->
-	<bean id="activitiDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="${activiti.jdbc.driverClassName}"></property>
-		<property name="url" value="${activiti.jdbc.url}"></property>
-		<property name="username" value="${activiti.jdbc.username}"></property>
-		<property name="password" value="${activiti.jdbc.password}"></property>
-		<property name="initialSize" value="${activiti.jdbc.initialSize}"></property> 
-		<property name="maxActive" value="${activiti.jdbc.maxActive}"></property>
-		<property name="maxIdle" value="${activiti.jdbc.maxIdle}"></property>
-		<property name="maxWait" value="${activiti.jdbc.maxWait}"/> 
-		<property name="minIdle" value="${activiti.jdbc.minIdle}"/> 
-		<property name="logAbandoned" value="${activiti.jdbc.logAbandoned}"/>
-		<property name="validationQuery" value="${activiti.jdbc.validationQuery}"></property>
-	</bean>
-	
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
 	  <property name="dataSource" ref="dataSource"/>  

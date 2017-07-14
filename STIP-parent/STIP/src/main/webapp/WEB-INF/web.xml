@@ -10,7 +10,6 @@
 		classpath:com/stip/net/monitoring/monitoring-spring.xml
 		/WEB-INF/applicationContext.xml
 		/WEB-INF/spring-bean.xml
-		/WEB-INF/spring-activiti.xml
 		</param-value>
 	</context-param>
 

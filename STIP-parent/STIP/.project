@@ -3,6 +3,11 @@
 	<name>STIP</name>
 	<comment></comment>
 	<projects>
+		<project>STIP-security</project>
+		<project>STIP-parent</project>
+		<project>STIP-utils</project>
+		<project>STIP-generator</project>
+		<project>STIP-monitoring</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
