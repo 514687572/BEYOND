@@ -7,11 +7,11 @@ import org.apache.ibatis.annotations.Param;
 
 
 /**
- * @author c
+ * @author cja
  *
- * @param <T>
- * @param <TE>
- * @param <PK>
+ * @param <T> 基础实体类
+ * @param <TE> 基础条件组装器
+ * @param <PK> ID
  */
 public interface GenericMapper<T extends BaseModel<PK>, TE extends BaseModelExample, PK extends Serializable> {
 	int countByExample(TE example);

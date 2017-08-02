@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 
- * @author c
+ * @author cja
  *
  */
 public abstract class BaseCriteria {

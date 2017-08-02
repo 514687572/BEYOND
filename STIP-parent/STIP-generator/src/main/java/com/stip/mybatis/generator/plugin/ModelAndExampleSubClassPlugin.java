@@ -22,7 +22,7 @@ import org.mybatis.generator.internal.util.StringUtility;
 /**
  * 生成Model 的相关子类
  * 
- * @author c
+ * @author cja
  *
  */
 public class ModelAndExampleSubClassPlugin extends PluginAdapter {

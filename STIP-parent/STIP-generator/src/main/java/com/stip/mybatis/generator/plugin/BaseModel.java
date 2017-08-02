@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 所有Example的基类，包括分页属性
  * 
- * @author c
+ * @author cja
  *
  */
 public class BaseModel<PK extends Serializable> implements Serializable {

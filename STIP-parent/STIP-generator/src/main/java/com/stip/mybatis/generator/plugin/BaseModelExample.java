@@ -3,7 +3,7 @@ package com.stip.mybatis.generator.plugin;
 /**
  * 所有Example的基类，包括分页属性
  * 
- * @author c
+ * @author cja
  * 
  */
 public class BaseModelExample {

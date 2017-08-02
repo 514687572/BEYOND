@@ -36,12 +36,12 @@ import org.mybatis.generator.internal.DefaultShellCallback;
  * <li>生成空的sqlmap custom的xml文件，不覆盖原来的，如果没有则创建空的</li>
  * </ol>
  * <p>
- * 使用方法配置与在generatorConfig.xml中其中</br>
- * baseModelNamePrefix 为新生成的类文件的前置关键字</br>
- * baseModelPackage 为生成新的类文件的包名</br>
- * extXmlPackage 包名</br>
+ * 使用方法配置与在generatorConfig.xml中其中
+ * baseModelNamePrefix 为新生成的类文件的前置关键字
+ * baseModelPackage 为生成新的类文件的包名
+ * extXmlPackage 包名
  * 
- * @author c
+ * @author cja
  *
  **/
 public class ModelAndExampleBaseClassPlugin extends PluginAdapter {

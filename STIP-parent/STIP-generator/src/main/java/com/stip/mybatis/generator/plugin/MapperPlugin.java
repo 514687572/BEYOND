@@ -21,7 +21,7 @@ import org.mybatis.generator.internal.util.StringUtility;
 /**
  * 生成 Mapper 类
  * 
- * @author c
+ * @author cja
  *
  */
 public class MapperPlugin extends PluginAdapter {
