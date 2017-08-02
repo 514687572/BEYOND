@@ -276,11 +276,6 @@
 			<artifactId>pinyin4j</artifactId>
 			<version>2.5.0</version>
 		</dependency>
-		<dependency>
-			<groupId>jspsmartupload</groupId>
-			<artifactId>jspsmartupload</artifactId>
-			<version>1.0</version>
-		</dependency>
 		<!-- dom4j -->
 		<dependency>
 			<groupId>dom4j</groupId>
@@ -336,12 +331,6 @@
 			<groupId>org.jdom</groupId>
 			<artifactId>jdom2</artifactId>
 			<version>2.0.5</version>
-		</dependency>
-		<dependency>
-			<groupId>QRCode</groupId>
-			<artifactId>QRCode</artifactId>
-			<version>1.0</version>
-			<classifier>QRCode</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.xfire</groupId>
@@ -407,11 +396,6 @@
 			<version>5.0.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.json</groupId>
-			<artifactId>javax.json</artifactId>
-			<version>1.0</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.antlr</groupId>
@@ -419,24 +403,6 @@
 			<version>4.5.3</version>
 		</dependency>
 		<!-- xss -->
-		<dependency>
-			<groupId>com.xss</groupId>
-			<artifactId>xssProtect</artifactId>
-			<version>0.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.antral</groupId>
-			<artifactId>antlr</artifactId>
-			<version>3.0</version>
-		</dependency>
-
-		<!-- urlrewriter -->
-		<dependency>
-			<groupId>urlrewrite</groupId>
-			<artifactId>urlrewrite-3.2.0</artifactId>
-			<version>3.2.0</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.java-websocket</groupId>
@@ -444,23 +410,6 @@
 			<version>1.3.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>dwr3</groupId>
-			<artifactId>dwr3</artifactId>
-			<version>3.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.qq</groupId>
-			<artifactId>com.qq</artifactId>
-			<version>1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apkinfo</groupId>
-			<artifactId>org.apkinfo</artifactId>
-			<version>1.0</version>
-		</dependency>
 		<!-- redis配置 -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
